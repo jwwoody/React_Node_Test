@@ -2,10 +2,13 @@
 import './App.css';
 import Nav from './components/Nav';
 import Home from './components/Home';
-import Tweet from './components/User';
+import User from './components/User';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { useState } from 'react';
+
 
 function App() {
+  User()
   return (
     <Router>
     <div className="App">
@@ -13,7 +16,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path ='/' element={<Home/>} />
-          <Route path ='/user' element={<Tweet/>} />
+          <Route path ='/user' element={<User/>} />
         </Routes>
       </header>
     </div>
